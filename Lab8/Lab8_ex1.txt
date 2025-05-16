@@ -1,0 +1,65 @@
+ Exercitiul 1
+
+1) Autentificare
+
+Actor: User
+
+Descriere: Utilizatorul se autentifica in sistem.
+
+User -> Sistem : Introduce numele si parola.
+
+Sistem -> User : Verificare
+
+Sistem -> User : Autentif Reusita / Nereusita
+
+2) Inregistrare
+
+Actor: User
+
+Descriere: User-ul se inregistreaza / isi creaza cont.
+
+User -> Sistem: Introduce numele parola si adresa de email.
+
+Sistem -> User: Verificare daca contul deja exista
+
+Sistem -> User Inreg reusita  Nereusita.
+
+3) Cautare
+
+Actor: User
+
+Descriere: Cauta masina (dupa marca, locatie, an, etc.)
+
+User -> Sistem : Introduce preferintele.
+
+Sistem -> User : Afiseaza toate rezultatele disponibile.
+
+4) Rezervare
+
+Actor: User
+
+Descriere: Face un request de rezervare.
+
+User -> Sistem : Alege o masina si face o rezervare.
+
+Sistem -> User : Verifica daca masina e disponibila si raspunde "Disponib. / Indispon."
+
+5) Plata
+
+Actor: User
+
+Descriere : User-ul va efectua plata
+
+Sistem -> User : Se afiseaza suma totala
+
+User -.> Sistem : Userul decide daca sa confirme sau nu plata
+
+Sistem -> Utilizator: Procesare plata...
+
+Sistem -> User : Confirmare plata / Eroare tranzactie
+
+6) Invoice
+
+Actor: User, Broker
+
+Descriere: Cei 2 actori vor primi un obiect factura.     
